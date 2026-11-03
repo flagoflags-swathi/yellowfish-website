@@ -4,3 +4,71 @@
 
 .brandlogo{display:block;width:64px;height:64px;min-width:64px;object-fit:contain;object-position:center;border-radius:50%;background:#fff;flex:none;border:1px solid #f0e5e5}
 .footer .brandlogo{background:#fff;width:58px;height:58px;min-width:58px}
+
+/* ===== DEMO TENT PROJECT DISPLAY ===== */
+
+.demo-projects {
+  background: #111827;
+  color: #ffffff;
+  padding: 75px 0;
+}
+
+.demo-projects .sectionhead {
+  margin-bottom: 35px;
+}
+
+.demo-projects .sectionhead h2 {
+  color: #ffffff;
+}
+
+.demo-projects .sectionhead p {
+  color: #cbd5e1;
+}
+
+.demo-projects .pill {
+  background: #273449;
+  color: #ffd43b;
+}
+
+.demo-tent-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.demo-tent-card {
+  overflow: hidden;
+  border-radius: 16px;
+  background: #202b3c;
+  border: 1px solid #374151;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.demo-tent-card img {
+  display: block;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.demo-tent-card:hover img {
+  transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+  .demo-tent-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .demo-tent-card img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .demo-projects {
+    padding: 50px 0;
+  }
+}
