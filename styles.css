@@ -2,5 +2,5 @@
 @media(max-width:850px){.navlinks{display:none}.mobilemenu{display:block}.grid,.featuregrid{grid-template-columns:repeat(2,1fr)}.twocol{grid-template-columns:1fr}.footgrid{grid-template-columns:1fr 1fr}.sectionhead{display:block}.cta{display:block}.cta .btn{margin-top:20px}}
 @media(max-width:560px){.container{width:min(100% - 28px,1160px)}.hero{padding:65px 0}.hero p{font-size:16px}.grid,.featuregrid{grid-template-columns:1fr}.footgrid{grid-template-columns:1fr}.trustrow{gap:18px}.cta{padding:26px}.nav{height:68px}}
 
-.brandlogo{width:52px;height:52px;object-fit:contain;border-radius:50%;background:#fff;flex:none;border:1px solid #f0e5e5}
-.footer .brandlogo{background:#fff}
+.brandlogo{display:block;width:64px;height:64px;min-width:64px;object-fit:contain;object-position:center;border-radius:50%;background:#fff;flex:none;border:1px solid #f0e5e5}
+.footer .brandlogo{background:#fff;width:58px;height:58px;min-width:58px}
