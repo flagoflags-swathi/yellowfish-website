@@ -78,16 +78,13 @@ function home(){shell(`<main><section class="hero"><div class="container"><div c
 </div>
 
 </div>
-  </div>
-
-  <button class="gallery-arrow" type="button"
+<button class="gallery-arrow" type="button"
     onclick="moveProjects(1)" aria-label="Next projects">
     &#10095;
-  </button>
-
-</div>
+</button>
   </div>
-</section>
+ </div>
+ </section>
 <section class="section soft"><div class="container"><div class="sectionhead"><div><span class="pill">Why Yellow Fish Ads</span><h2>From product idea to branded visibility</h2></div><p>We support promotional and outdoor branding requirements with product choices suited to your campaign, location and quantity.</p></div><div class="featuregrid"><div class="feature"><div class="num">01</div><h3>Campaign-focused range</h3><p>Tents, flags, umbrellas and display products for roadshows, retail promotions and events.</p></div><div class="feature"><div class="num">02</div><h3>Custom branding</h3><p>Share your logo and artwork to discuss printing, materials, sizes and finish options.</p></div><div class="feature"><div class="num">03</div><h3>Enquiry-led support</h3><p>Tell us the product, quantity and delivery location so we can prepare a relevant quote.</p></div></div></div></section><section class="section"><div class="container"><div class="cta"><div><h2>Planning your next brand activation?</h2><p>Send your product, quantity, artwork and delivery location.</p></div><a class="btn dark" href="contact.html">Get a Custom Quote →</a></div></div></section></main>`)}
 function moveProjects(direction) {
   const gallery = document.getElementById('projectGallery');
