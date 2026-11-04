@@ -64,6 +64,20 @@ function home(){shell(`<main><section class="hero"><div class="container"><div c
     <img src="./assets/gazebo-tent-4.png"
          alt="Black Nexa Promotional Gazebo Tent">
 </div>
+
+<!-- New Feather Flag images -->
+
+<div class="demo-tent-card">
+    <img src="./assets/feather-flag-1.webp"
+         alt="Promotional Feather Flags - Diwali Campaign">
+</div>
+
+<div class="demo-tent-card">
+    <img src="./assets/feather-flag-2.webp"
+         alt="Harley Davidson Promotional Feather Flags">
+</div>
+
+</div>
   </div>
 
   <button class="gallery-arrow" type="button"
