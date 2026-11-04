@@ -115,23 +115,17 @@
     font-size: 16px;
   }
 }
-
-.demo-tent-card:hover img {
-  transform: scale(1.04);
-}
-
 @media (max-width: 768px) {
   .demo-tent-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .demo-tent-card img {
-    height: auto;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-  }
-
+ .demo-tent-card img {
+  height: 240px;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
   .demo-projects {
     padding: 50px 0;
   }
