@@ -102,18 +102,24 @@
     flex-basis: 100%;
   }
 
-  .demo-project-gallery {
+ .demo-project-gallery {
+    display: flex;
+    align-items: center;
     gap: 8px;
-  }
-.demo-tent-card img {
-  height: 240px;
+    width: 100%;
 }
-  .gallery-arrow {
-    flex-basis: 34px;
+
+.demo-tent-grid {
+    flex: 1;
+    min-width: 0;
+}
+
+.gallery-arrow {
+    flex: 0 0 34px;
     width: 34px;
     height: 34px;
+    align-self: center;
     font-size: 16px;
-  }
 }
 @media (max-width: 768px) {
   .demo-tent-grid {
