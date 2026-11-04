@@ -45,7 +45,25 @@ function home(){shell(`<main><section class="hero"><div class="container"><div c
       <img src="./assets/paperboat-swing-tent-2.png"
         alt="Paper Boat Promotional Tent">
     </div>
+<div class="demo-tent-card">
+    <img src="./assets/gazebo-tent-1.png"
+         alt="Yellow CAT Promotional Gazebo Tent">
+</div>
 
+<div class="demo-tent-card">
+    <img src="./assets/gazebo-tent-2.png"
+         alt="Red Promotional Gazebo Tent">
+</div>
+
+<div class="demo-tent-card">
+    <img src="./assets/gazebo-tent-3.png"
+         alt="Blue Enclosed Gazebo Tent">
+</div>
+
+<div class="demo-tent-card">
+    <img src="./assets/gazebo-tent-4.png"
+         alt="Black Nexa Promotional Gazebo Tent">
+</div>
   </div>
 
   <button class="gallery-arrow" type="button"
