@@ -23,9 +23,9 @@ function home(){shell(`<main><section class="hero"><div class="container"><div c
     <div class="sectionhead">
       <div>
         <span class="pill">Our Real Projects</span>
-        <h2>Our Demo Tent Projects</h2>
+        <h2>Our Projects & Brand Activations</h2>
       </div>
-      <p>Real promotional tent installations by Yellow Fish Ads.</p>
+      <p>Showcasing our completed projects, promotional installations and brand activations across India.</p>
     </div>
     <div class="demo-tent-grid">
       <div class="demo-tent-card">
