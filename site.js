@@ -77,6 +77,49 @@ function home(){shell(`<main><section class="hero"><div class="container"><div c
          alt="Harley Davidson Promotional Feather Flags">
 </div>
 
+<!-- Promotional Tables -->
+<div class="demo-tent-card">
+  <img src="./assets/promotional-table-with-umbrella-1.webp"
+       alt="Promotional Table with Branded Umbrella">
+</div>
+
+<div class="demo-tent-card">
+  <img src="./assets/promotional-table-1.webp"
+       alt="Promotional Marketing Table">
+</div>
+
+<!-- Promotional Standees -->
+<div class="demo-tent-card">
+  <img src="./assets/promotional-standee-1.webp"
+       alt="Promotional Standee Display">
+</div>
+
+<div class="demo-tent-card">
+  <img src="./assets/promotional-standee-2.webp"
+       alt="Brand Activation Standee">
+</div>
+
+<!-- Promotional Umbrellas -->
+<div class="demo-tent-card">
+  <img src="./assets/promotional-umbrella-1.png"
+       alt="Promotional Umbrella">
+</div>
+
+<div class="demo-tent-card">
+  <img src="./assets/promotional-umbrella-5.webp"
+       alt="Branded Promotional Umbrella">
+</div>
+
+<div class="demo-tent-card">
+  <img src="./assets/promotional-umbrella-6.webp"
+       alt="Outdoor Promotional Umbrella">
+</div>
+
+<div class="demo-tent-card">
+  <img src="./assets/promotional-umbrella-7.webp"
+       alt="Marketing Promotional Umbrella">
+</div>
+
 </div>
 <button class="gallery-arrow" type="button"
     onclick="moveProjects(1)" aria-label="Next projects">
