@@ -165,7 +165,157 @@ function moveProjects(direction) {
     behavior: 'smooth'
   });
 }
-function productPage(p){shell(`<main><section class="pagehero"><div class="container"><div class="crumb"><a href="index.html">Home</a> / Products / ${p[1]}</div><span class="eyebrow">Yellow Fish Ads · Product range</span><h1>${p[1]}</h1><p>${p[2]}</p><a class="btn" href="contact.html?product=${encodeURIComponent(p[1])}">Enquire Now</a></div></section><section class="section"><div class="container twocol"><div><span class="pill">Product overview</span><h2>${p[1]} for business promotions</h2><p>${p[3]}</p><p>Yellow Fish Ads can help you discuss suitable sizes, materials, printing options and quantities for your requirement. Final specifications, pricing and delivery timelines are confirmed against the order details.</p><h3>Share these details for a quotation</h3><ul class="checklist"><li>Required size or product configuration</li><li>Quantity required</li><li>Logo / artwork or design brief</li><li>Delivery city and required date</li><li>Any material or quality preference</li></ul><a class="btn" href="contact.html?product=${encodeURIComponent(p[1])}">Request Product Pricing</a></div><aside class="panel"><div class="productvisual" style="border-radius:14px;margin-bottom:20px">${icon(p[0].includes('tent')?'tent':p[0].includes('umbrella')?'umbrella':p[0].includes('table')?'table':p[0].includes('standee')?'stand':'flag')}</div><h3>Need a custom quotation?</h3><p>Send your requirement to our team. We will review the product, quantity and delivery details.</p><a class="btn dark" href="contact.html?product=${encodeURIComponent(p[1])}">Send an Enquiry</a><p class="notice">Call us: +91 80968 22114 or +91 96181 85869. GSTIN: 36ABIFM4974G1ZW.</p></aside></div></section><section class="section soft"><div class="container"><div class="sectionhead"><div><span class="pill">Explore more</span><h2>Related products</h2></div></div><div class="grid">${products.filter(x=>x[0]!==p[0]).slice(0,3).map(card).join('')}</div></div></section></main>`)}
+
+function productPage(p) {
+  let kind = p[0].includes('tent') ? 'tent'
+    : p[0].includes('umbrella') ? 'umbrella'
+    : p[0].includes('table') ? 'table'
+    : p[0].includes('standee') ? 'stand'
+    : 'flag';
+
+  let visual = p[4]
+    ? `<img src="${p[4]}" alt="${p[1]}" class="detail-product-image">`
+    : icon(kind);
+
+  let waMessage = `Hi Yellow Fish Ads, I am interested in ${p[1]}. Please share product details, available sizes, materials and pricing.`;
+
+  let waLink = `https://wa.me/918096822114?text=${encodeURIComponent(waMessage)}`;
+
+  shell(`
+    <main>
+
+      <section class="product-detail-section">
+        <div class="container">
+
+          <div class="crumb">
+            <a href="index.html">Home</a> /
+            <a href="index.html#products">Products</a> /
+            ${p[1]}
+          </div>
+
+          <div class="product-detail-grid">
+
+            <!-- LEFT: PRODUCT IMAGE AND FEATURES -->
+            <div class="detail-gallery">
+
+              <div class="detail-main-image">
+                ${visual}
+              </div>
+
+              <div class="detail-image-caption">
+                <span class="pill">YELLOW FISH ADS</span>
+                <h3>Professional Branding Solutions</h3>
+                <p>Customised promotional products for your business and events.</p>
+              </div>
+
+              <div class="detail-benefits">
+                <div>✓ Custom Branding</div>
+                <div>✓ Quality Materials</div>
+                <div>✓ Multiple Options</div>
+                <div>✓ Bulk Orders</div>
+              </div>
+
+            </div>
+
+            <!-- RIGHT: PRODUCT INFORMATION -->
+            <div class="detail-information">
+
+              <span class="pill">PRODUCT OVERVIEW</span>
+
+              <h1>${p[1]}</h1>
+
+              <p class="detail-subtitle">${p[2]}</p>
+
+              <p class="detail-description">${p[3]}</p>
+
+              <div class="detail-panel">
+
+                <h3>Product Features & Options</h3>
+
+                <ul class="detail-checklist">
+                  <li>Custom sizes and configurations</li>
+                  <li>Logo and brand artwork printing</li>
+                  <li>Different material and quality options</li>
+                  <li>Suitable for promotional campaigns</li>
+                  <li>Bulk order requirements supported</li>
+                </ul>
+
+                <div class="detail-divider"></div>
+
+                <h3>Applications</h3>
+
+                <div class="detail-tags">
+                  <span>Brand Promotions</span>
+                  <span>Exhibitions</span>
+                  <span>Retail Marketing</span>
+                  <span>Outdoor Events</span>
+                  <span>Corporate Campaigns</span>
+                </div>
+
+                <div class="detail-divider"></div>
+
+                <h3>Share Your Requirements</h3>
+
+                <ul class="detail-checklist">
+                  <li>Required size or configuration</li>
+                  <li>Quantity required</li>
+                  <li>Logo, artwork or design</li>
+                  <li>Delivery location</li>
+                  <li>Material or quality preference</li>
+                </ul>
+
+              </div>
+
+              <!-- WHATSAPP CONTACT -->
+              <div class="detail-whatsapp-panel">
+
+                <div>
+                  <h3>Interested in this product?</h3>
+                  <p>Contact our team directly for product details, pricing and bulk orders.</p>
+                </div>
+
+                <a class="detail-whatsapp-btn"
+                   href="${waLink}"
+                   target="_blank"
+                   rel="noopener">
+                  <span>☘</span> Chat with us on WhatsApp →
+                </a>
+
+                <p class="detail-phone">
+                  Call: +91 80968 22114 | +91 96181 85869
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- RELATED PRODUCTS -->
+      <section class="section soft">
+        <div class="container">
+
+          <div class="sectionhead">
+            <div>
+              <span class="pill">EXPLORE MORE</span>
+              <h2>Related Products</h2>
+            </div>
+          </div>
+
+          <div class="grid">
+            ${products.filter(x => x[0] !== p[0])
+              .slice(0,3).map(card).join('')}
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  `);
+}
+
 function about(){shell(`<main><section class="pagehero"><div class="container"><div class="crumb"><a href="index.html">Home</a> / About Us</div><span class="eyebrow">About the company</span><h1>Promotional products. Practical brand visibility.</h1><p>Yellow Fish Ads is a Hyderabad-based promotional products and outdoor branding business supporting custom product requirements for businesses and events.</p></div></section><section class="section"><div class="container twocol"><div><h2>Helping brands show up outdoors</h2><p>Our product range includes promotional tents, gazebo tents, feather flags, custom flags, umbrellas, promotional tables, roll-up standees and other event branding materials.</p><p>We work with customers to understand their campaign needs, product specifications, branding artwork, quantity and delivery requirements.</p></div><div class="panel"><h3>Company details</h3><ul class="checklist"><li>Business: Yellow Fish Ads</li><li>Base: Hyderabad, Telangana, India</li><li>Focus: Promotional products and outdoor branding</li><li>Markets: India-wide enquiries</li><li>GSTIN: 36ABIFM4974G1ZW</li><li>Phone: +91 80968 22114 / +91 96181 85869</li><li>Address: Sahithi Kadamanchi Complex, 403 &amp; 404, beside Neerus Shopping Mall, opposite Metro Pillar 1566, Chaitanyapuri X Roads, Hyderabad – 500060</li></ul></div></div></section></main>`)}
 function contact(){let q=new URLSearchParams(location.search).get('product')||'';shell(`<main><section class="pagehero"><div class="container"><div class="crumb"><a href="index.html">Home</a> / Contact</div><span class="eyebrow">Let's discuss your requirement</span><h1>Request a product quotation</h1><p>Share your requirement with Yellow Fish Ads. Call our Hyderabad team or submit the enquiry details below.</p></div></section><section class="section"><div class="container twocol"><div><h2>Tell us what you need</h2><p>For a faster quotation, include product name, size, quantity, artwork status and delivery city.</p><div class="panel"><h3>Yellow Fish Ads</h3><p>Sahithi Kadamanchi Complex, 403 &amp; 404, beside Neerus Shopping Mall, opposite Metro Pillar 1566, Chaitanyapuri X Roads, Hyderabad – 500060, Telangana, India.</p><p><a href="tel:+918096822114">+91 80968 22114</a><br><a href="tel:+919618185869">+91 96181 85869</a></p><p>GSTIN: 36ABIFM4974G1ZW</p></div></div><form class="panel form" id="enquiry"><h3>Enquiry form</h3><input name="name" placeholder="Your name" required><input name="company" placeholder="Company name"><input name="phone" placeholder="Phone number" required><input name="email" type="email" placeholder="Email address"><input name="product" placeholder="Product required" value="${q.replaceAll('"','&quot;')}"><input name="quantity" placeholder="Quantity"><textarea name="message" placeholder="Size, artwork, delivery location and other details"></textarea><button class="btn dark" type="submit">Prepare Enquiry</button><p class="notice" id="formnote">This demo form prepares an enquiry message. Connect a business email, CRM or WhatsApp number before launch to receive submissions.</p></form></div></section></main>`);document.getElementById('enquiry').addEventListener('submit',e=>{e.preventDefault();let d=Object.fromEntries(new FormData(e.target));let msg=`Yellow Fish Ads enquiry\nName: ${d.name}\nCompany: ${d.company}\nPhone: ${d.phone}\nEmail: ${d.email}\nProduct: ${d.product}\nQuantity: ${d.quantity}\nDetails: ${d.message}`;let blob=new Blob([msg],{type:'text/plain'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='yellow-fish-ads-enquiry.txt';a.click();document.getElementById('formnote').textContent='Enquiry text downloaded. Connect a live submission channel before publishing.'})}
 let path=location.pathname.split('/').pop()||'index.html';if(path==='index.html')home();else if(path==='about.html')about();else if(path==='contact.html')contact();else{let slug=path.replace('.html','');let p=products.find(x=>x[0]===slug);p?productPage(p):home()}
