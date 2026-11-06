@@ -579,4 +579,99 @@
   }
 }
 
+/* =================================
+   YELLOW FISH ADS - PRODUCT FEATURES
+================================= */
+
+.detail-feature-strip {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    padding: 20px 14px;
+    margin-top: 18px;
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(20, 33, 61, 0.05);
+}
+
+.detail-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 9px;
+    color: #14213d;
+    min-width: 0;
+}
+
+.detail-feature .feature-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffcf24;
+    color: #14213d;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: 0.25s ease;
+}
+
+.detail-feature .feature-icon svg {
+    width: 23px;
+    height: 23px;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+.detail-feature span {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.45;
+    color: #14213d;
+}
+
+.detail-feature:hover .feature-icon {
+    background: #14213d;
+    color: #ffcf24;
+    transform: translateY(-3px);
+}
+
+/* TABLET VIEW */
+
+@media (max-width: 768px) {
+    .detail-feature-strip {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px 10px;
+        padding: 18px 10px;
+    }
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 480px) {
+    .detail-feature-strip {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px 8px;
+        padding: 16px 8px;
+        border-radius: 14px;
+    }
+
+    .detail-feature .feature-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .detail-feature .feature-icon svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .detail-feature span {
+        font-size: 11px;
+    }
+}
+
 
