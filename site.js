@@ -195,7 +195,64 @@ let galleryImages = p[0] === 'gazebo-tents' ? [
     src: 'gazebo-tent-inside.webp'
   }
 ] : [];
+let featureStrip = p[0] === 'gazebo-tents' ? `
+  <div class="detail-feature-strip">
 
+    <div class="detail-feature">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      </div>
+      <span>Weather-Resistant<br>Fabric Options</span>
+    </div>
+
+    <div class="detail-feature">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.7 1.7-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5v.2h-2.4v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1L8 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H6.7v-2.4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9L8 8.6l1.7-1.7.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.5v-.2h2.4v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1 1.7 1.7-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5 1h.2V14h-.2a1.7 1.7 0 0 0-1.5 1z"/>
+        </svg>
+      </div>
+      <span>Custom Logo<br>Printing</span>
+    </div>
+
+    <div class="detail-feature">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 20 20 4"/>
+          <path d="M5 16l3 3M8 13l2 2M11 10l2 2M14 7l2 2"/>
+          <path d="M4 20h5"/>
+        </svg>
+      </div>
+      <span>Multiple Size<br>Options</span>
+    </div>
+
+    <div class="detail-feature">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 21V5l9-3 9 3v16"/>
+          <path d="M3 5h18M7 5v16M17 5v16M3 21h18"/>
+          <path d="M7 10h10M7 15h10"/>
+        </svg>
+      </div>
+      <span>Sturdy Frame<br>Structure</span>
+    </div>
+
+    <div class="detail-feature">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="17" rx="2"/>
+          <path d="M16 2v4M8 2v4M3 10h18"/>
+          <path d="m9 15 2 2 4-4"/>
+        </svg>
+      </div>
+      <span>Events &<br>Promotions</span>
+    </div>
+
+  </div>
+` : '';
   let waMessage = `Hi Yellow Fish Ads, I am interested in ${p[1]}. Please share product details, available sizes, materials and pricing.`;
 
   let waLink = `https://wa.me/918096822114?text=${encodeURIComponent(waMessage)}`;
@@ -260,24 +317,11 @@ ${galleryImages.length ? `
   `).join('')}
 </div>
 ` : ''}
-              <div class="detail-image-caption">
-                <span class="pill">YELLOW FISH ADS</span>
-                <h3>Professional Branding Solutions</h3>
-                <p>Customised promotional products for your business and events.</p>
-              </div>
-
-              <div class="detail-benefits">
-                <div>✓ Custom Branding</div>
-                <div>✓ Quality Materials</div>
-                <div>✓ Multiple Options</div>
-                <div>✓ Bulk Orders</div>
-              </div>
-
+             
+            ${featureStrip}
             </div>
 
-            <!-- RIGHT: PRODUCT INFORMATION -->
-            <div class="detail-information">
-
+              <div class="detail-information">
               <span class="pill">PRODUCT OVERVIEW</span>
 
               <h1>${p[1]}</h1>
