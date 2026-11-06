@@ -7,8 +7,8 @@ const products=[
 ['custom-flags','Custom Printed Flags','Made-to-order flags for businesses, institutions, events, clubs and promotional campaigns.','Share your artwork, size and quantity to receive a suitable quotation.'],
 ['promotional-umbrellas','Promotional Umbrellas','Branded umbrellas for outdoor promotions, hospitality, cafes and customer engagement.','Brand panels can be customised to suit your campaign and product requirements.','./assets/promotional-umbrella-icon.webp'],
 ['cantilever-umbrellas','Cantilever Side Pole Umbrellas','Side-pole umbrellas for restaurants, cafes, resorts and outdoor seating areas.','Options may include 9 ft sizes, water-resistant sun fabric and mild-steel frames.'],
-['promotional-tables','Promotional Tables','Portable promotional tables for sampling, product demonstrations and event counters.','Custom printed table branding for exhibitions, retail activations and roadshows.'],
-['roll-up-standees','Roll-up Standees','Portable roll-up display stands for shops, conferences, exhibitions and events.','Choose display sizes and print quality to match your campaign requirements.'],
+['promotional-tables','Promotional Tables','Portable promotional tables for sampling, product demonstrations and event counters.','Custom printed table branding for exhibitions, retail activations and roadshows.','./assets/promotional-table-icon.webp'],
+['roll-up-standees','Roll-Up Standees','Portable roll-up display stands for shops, conferences, exhibitions and events.','Choose display sizes and print quality to match your campaign requirements.','./assets/promotional-standee-icon.webp'],
 ['flag-arches','Flag Arches','Branded flag arches and entrance structures for events, launches and outdoor promotions.','Custom branding and configurations available based on project requirements.'],
 ['auto-branding','Auto Branding Stickers','Vehicle branding stickers for promotional campaigns, fleet visibility and local advertising.','Artwork, material and quantity can be planned around your vehicle branding project.']
 ];
