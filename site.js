@@ -181,6 +181,24 @@ function productPage(p) {
 
   let waLink = `https://wa.me/918096822114?text=${encodeURIComponent(waMessage)}`;
 
+let specifications = {
+  'gazebo-tents': [
+    ['Available Sizes', '4×4 ft, 6×6 ft, 10×10 ft and custom sizes'],
+    ['Height', 'Product-specific configuration'],
+    ['Fabric Options', 'Tetron / Sunfabric options'],
+    ['Printing', 'Custom logo and full-colour branding'],
+    ['Frame', 'Portable, sturdy frame options'],
+    ['Applications', 'Exhibitions, roadshows, outdoor promotions']
+  ]
+};
+
+let specs = specifications[p[0]] || [
+  ['Available Options', 'Multiple sizes and configurations'],
+  ['Customisation', 'Custom branding and artwork'],
+  ['Materials', 'Options based on product requirements'],
+  ['Applications', 'Promotions, exhibitions and events']
+];
+
   shell(`
     <main>
 
@@ -228,43 +246,46 @@ function productPage(p) {
 
               <p class="detail-description">${p[3]}</p>
 
-              <div class="detail-panel">
+            
+<div class="detail-panel">
 
-                <h3>Product Features & Options</h3>
+  <h3>Technical Specifications</h3>
 
-                <ul class="detail-checklist">
-                  <li>Custom sizes and configurations</li>
-                  <li>Logo and brand artwork printing</li>
-                  <li>Different material and quality options</li>
-                  <li>Suitable for promotional campaigns</li>
-                  <li>Bulk order requirements supported</li>
-                </ul>
+  <div class="technical-specs">
+    ${specs.map(item => `
+      <div class="spec-row">
+        <strong>${item[0]}</strong>
+        <span>${item[1]}</span>
+      </div>
+    `).join('')}
+  </div>
 
-                <div class="detail-divider"></div>
+  <div class="detail-divider"></div>
 
-                <h3>Applications</h3>
+  <h3>Customisation Options</h3>
 
-                <div class="detail-tags">
-                  <span>Brand Promotions</span>
-                  <span>Exhibitions</span>
-                  <span>Retail Marketing</span>
-                  <span>Outdoor Events</span>
-                  <span>Corporate Campaigns</span>
-                </div>
+  <ul class="detail-checklist">
+    <li>Custom sizes and configurations</li>
+    <li>Company logo and brand printing</li>
+    <li>Multiple fabric and quality options</li>
+    <li>Custom colour combinations</li>
+    <li>Bulk order requirements</li>
+  </ul>
 
-                <div class="detail-divider"></div>
+  <div class="detail-divider"></div>
 
-                <h3>Share Your Requirements</h3>
+  <h3>Where Can You Use It?</h3>
 
-                <ul class="detail-checklist">
-                  <li>Required size or configuration</li>
-                  <li>Quantity required</li>
-                  <li>Logo, artwork or design</li>
-                  <li>Delivery location</li>
-                  <li>Material or quality preference</li>
-                </ul>
+  <div class="detail-tags">
+    <span>Exhibitions</span>
+    <span>Roadshows</span>
+    <span>Retail Promotions</span>
+    <span>Outdoor Events</span>
+    <span>Brand Activations</span>
+  </div>
 
-              </div>
+</div>
+
 
               <!-- WHATSAPP CONTACT -->
               <div class="detail-whatsapp-panel">
