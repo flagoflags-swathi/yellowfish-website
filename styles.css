@@ -497,5 +497,29 @@
 }
 
 }
+/* FINAL WHATSAPP BUTTON FIX */
+
+.detail-whatsapp-btn {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px;
+    background-color: #16a34a !important;
+    color: #ffffff !important;
+    padding: 16px 25px;
+    border-radius: 35px;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none !important;
+    margin-top: 15px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+.detail-whatsapp-btn:hover {
+    background-color: #128c3e !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
 
 
