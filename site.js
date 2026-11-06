@@ -176,6 +176,25 @@ function productPage(p) {
   let visual = p[4]
     ? `<img src="${p[4]}" alt="${p[1]}" class="detail-product-image">`
     : icon(kind);
+    // GAZEBO TENT IMAGE GALLERY
+let galleryImages = p[0] === 'gazebo-tents' ? [
+  {
+    name: 'Front View',
+    src: 'gazebo-tent-front.webp'
+  },
+  {
+    name: 'Side View',
+    src: 'gazebo-tent-side.webp'
+  },
+  {
+    name: 'Top View',
+    src: 'gazebo-tent-top.webp'
+  },
+  {
+    name: 'Inside View',
+    src: 'gazebo-tent-inside.webp'
+  }
+] : [];
 
   let waMessage = `Hi Yellow Fish Ads, I am interested in ${p[1]}. Please share product details, available sizes, materials and pricing.`;
 
@@ -219,7 +238,28 @@ let specs = specifications[p[0]] || [
               <div class="detail-main-image">
                 ${visual}
               </div>
-
+${galleryImages.length ? `
+<div class="detail-image-thumbnails">
+  ${galleryImages.map((img, index) => `
+    <button
+      type="button"
+      class="detail-thumb ${index === 0 ? 'active' : ''}"
+      onclick="
+        const gallery = this.closest('.detail-gallery');
+        const mainImage = gallery.querySelector('.detail-product-image');
+        mainImage.src = this.querySelector('img').src;
+        mainImage.alt = this.querySelector('img').alt;
+        gallery.querySelectorAll('.detail-thumb')
+          .forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+      "
+    >
+      <img src="${img.src}" alt="${img.name}">
+      <span>${img.name}</span>
+    </button>
+  `).join('')}
+</div>
+` : ''}
               <div class="detail-image-caption">
                 <span class="pill">YELLOW FISH ADS</span>
                 <h3>Professional Branding Solutions</h3>
