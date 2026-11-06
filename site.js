@@ -26,7 +26,7 @@ function card(p) {
         : icon(kind);
 
     return `<article class="product">
-        <div class="product-visual">${visual}</div>
+        <div class="productvisual">${visual}</div>
         <div class="productbody">
             <h3>${p[1]}</h3>
             <p>${p[2]}</p>
