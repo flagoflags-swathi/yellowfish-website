@@ -1,5 +1,5 @@
 const products=[
-['gazebo-tents','Gazebo Tents','10x10 and custom-size gazebo tents for promotions, exhibitions, events and outdoor brand activations.','Portable branded shelters with sturdy frames and weather-resistant fabric options.','/assets/gazebo-icon.webp'],
+['gazebo-tents','Gazebo Tents','10x10 and custom-size gazebo tents for promotions, exhibitions, events and outdoor brand activations.','Portable branded shelters with sturdy frames and weather-resistant fabric options.','./assets/gazebo-icon.webp'],
 ['marketing-tents','Marketing Tents','Promotional marketing tents designed for retail activations, roadshows and field campaigns.','Choose practical sizes, fabric options and custom branding for your campaign.'],
 ['feather-flags','Feather Flags','Eye-catching feather flags for storefronts, property sites, events and outdoor advertising.','Available with printed fabric and suitable bases for different installation needs.'],
 ['political-flags','Political Flags','Custom political campaign flags for rallies, public meetings and campaign events.','Custom sizes, colours and artwork printing based on your approved design.'],
