@@ -521,5 +521,62 @@
     color: #ffffff !important;
     transform: translateY(-2px);
 }
+/* PRODUCT IMAGE GALLERY */
+
+.detail-image-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.detail-thumb {
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.detail-thumb img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+
+.detail-thumb span {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #14213d;
+  margin-top: 6px;
+}
+
+.detail-thumb.active {
+  border-color: #ffbf18;
+  background: #fff9e8;
+}
+
+.detail-thumb:hover {
+  border-color: #ffbf18;
+}
+
+@media (max-width: 560px) {
+  .detail-image-thumbnails {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .detail-thumb {
+    padding: 4px;
+  }
+
+  .detail-thumb span {
+    font-size: 10px;
+  }
+}
 
 
