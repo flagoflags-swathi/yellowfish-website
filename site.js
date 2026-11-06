@@ -1,5 +1,5 @@
 const products=[
-['gazebo-tents','Gazebo Tents','10×10 and custom-size gazebo tents for promotions, exhibitions, events and outdoor brand activations.','Portable branded shelters with sturdy frames and weather-resistant fabric options.'],
+['gazebo-tents','Gazebo Tents','10x10 and custom-size gazebo tents for promotions, exhibitions, events and outdoor brand activations.','Portable branded shelters with sturdy frames and weather-resistant fabric options.','/assets/gazebo-icon.webp'],
 ['marketing-tents','Marketing Tents','Promotional marketing tents designed for retail activations, roadshows and field campaigns.','Choose practical sizes, fabric options and custom branding for your campaign.'],
 ['feather-flags','Feather Flags','Eye-catching feather flags for storefronts, property sites, events and outdoor advertising.','Available with printed fabric and suitable bases for different installation needs.'],
 ['political-flags','Political Flags','Custom political campaign flags for rallies, public meetings and campaign events.','Custom sizes, colours and artwork printing based on your approved design.'],
@@ -13,7 +13,28 @@ const products=[
 ['auto-branding','Auto Branding Stickers','Vehicle branding stickers for promotional campaigns, fleet visibility and local advertising.','Artwork, material and quantity can be planned around your vehicle branding project.']
 ];
 const icon=(kind)=>{const common='fill="none" stroke="#14233b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"';let shapes={tent:'<path d="M20 80 50 20 80 80Z"/><path d="M50 20v60M20 80h60"/>',flag:'<path d="M25 85V15M25 18h48l-12 16 12 16H25"/>',umbrella:'<path d="M12 50a38 38 0 0 1 76 0H12Z"/><path d="M50 50v28q0 12 12 8"/>',table:'<path d="M15 35h70v10H15zM25 45v38M75 45v38"/>',stand:'<path d="M25 15h50v62H25zM50 77v10M35 87h30"/>'};return `<svg viewBox="0 0 100 100" ${common}>${shapes[kind]||shapes.flag}</svg>`};
-function card(p){let kind=p[0].includes('tent')?'tent':p[0].includes('umbrella')?'umbrella':p[0].includes('table')?'table':p[0].includes('standee')?'stand':'flag';return `<article class="product"><div class="productvisual">${icon(kind)}</div><div class="productbody"><h3>${p[1]}</h3><p>${p[2]}</p><a class="textlink" href="${p[0]}.html">Explore product →</a></div></article>`}
+
+function card(p) {
+    let kind = p[0].includes('tent') ? 'tent'
+        : p[0].includes('umbrella') ? 'umbrella'
+        : p[0].includes('table') ? 'table'
+        : p[0].includes('standee') ? 'stand'
+        : 'flag';
+
+    let visual = p[4]
+        ? `<img src="${p[4]}" alt="${p[1]}" class="product-category-image" loading="lazy">`
+        : icon(kind);
+
+    return `<article class="product">
+        <div class="product-visual">${visual}</div>
+        <div class="productbody">
+            <h3>${p[1]}</h3>
+            <p>${p[2]}</p>
+            <a class="textlink" href="${p[0]}.html">Explore product →</a>
+        </div>
+    </article>`;
+}
+
 function header(){return `<div class="topbar"><div class="container"><span>Promotional Products • Branding • Outdoor Advertising</span><span>Hyderabad, India · Serving customers across India</span></div></div><header class="header"><div class="container nav"><a class="brand" href="index.html"><img class="brandlogo" src="./assets/yellow-fish-ads-logo.jpg" alt="Yellow Fish Ads logo" width="64" height="64"><span>YELLOW FISH ADS<small>PROMOTIONAL PRODUCTS</small></span></a><nav class="navlinks"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="index.html#products">Products</a><a href="contact.html">Contact</a></nav><a class="btn" href="contact.html">Get a Quote</a></div></header>`}
 function footer(){return `<footer class="footer"><div class="container"><div class="footgrid"><div><a class="brand" href="index.html"><img class="brandlogo" src="./assets/yellow-fish-ads-logo.jpg" alt="Yellow Fish Ads logo" width="64" height="64"><span style="color:white">YELLOW FISH ADS<small style="color:#b9c5d8">PROMOTIONAL PRODUCTS</small></span></a><p>Promotional products and outdoor branding solutions for businesses, events and campaigns. Based in Hyderabad, India.</p></div><div><h3>Products</h3>${products.slice(0,6).map(p=>`<p><a href="${p[0]}.html">${p[1]}</a></p>`).join('')}</div><div><h3>Get in touch</h3><p>Sahithi Kadamanchi Complex, 403 &amp; 404, beside Neerus Shopping Mall, opposite Metro Pillar 1566, Chaitanyapuri X Roads, Hyderabad – 500060, Telangana, India.</p><p><a href="tel:+918096822114">+91 80968 22114</a><br><a href="tel:+919618185869">+91 96181 85869</a></p><p>GSTIN: 36ABIFM4974G1ZW</p><a class="btn" href="contact.html">Send an Enquiry</a></div></div><div class="copyright">© <span id="year"></span> Yellow Fish Ads. All rights reserved. · Website content and contact details to be verified before launch.</div></div></footer>`}
 function shell(content){document.body.innerHTML=header()+content+footer();document.getElementById('year').textContent=new Date().getFullYear()}
