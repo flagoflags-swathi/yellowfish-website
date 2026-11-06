@@ -438,3 +438,39 @@
     }
 }
 
+
+/* TECHNICAL SPECIFICATIONS */
+
+.technical-specs {
+  display: grid;
+  gap: 0;
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  gap: 15px;
+  padding: 13px 0;
+  border-bottom: 1px solid #e2e8f0;
+  align-items: start;
+}
+
+.spec-row strong {
+  color: #14213d;
+  font-size: 14px;
+}
+
+.spec-row span {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 560px) {
+  .spec-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
+
+
