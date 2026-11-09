@@ -362,18 +362,6 @@ ${galleryImages.length ? `
 
   <div class="detail-divider"></div>
 
-  <h3>Where Can You Use It?</h3>
-
-  <div class="detail-tags">
-    <span>Exhibitions</span>
-    <span>Roadshows</span>
-    <span>Retail Promotions</span>
-    <span>Outdoor Events</span>
-    <span>Brand Activations</span>
-  </div>
-
-</div>
-
 
               <!-- WHATSAPP CONTACT -->
               <div class="detail-whatsapp-panel">
