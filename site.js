@@ -243,7 +243,7 @@ else if (p[0] === 'feather-flags') {
   ];
 }
 
-let featureStrip = p[0] === 'gazebo-tents' ? `
+let featureStrip = ['gazebo-tents', 'marketing-tents', 'feather-flags'].includes(p[0]) ? `
   <div class="detail-feature-strip">
 
     <div class="detail-feature">
@@ -253,7 +253,9 @@ let featureStrip = p[0] === 'gazebo-tents' ? `
           <path d="m9 12 2 2 4-4"/>
         </svg>
       </div>
-      <span>Weather-Resistant<br>Fabric Options</span>
+      <span>${p[0] === 'feather-flags'
+  ? 'Outdoor Display<br>Fabric'
+  : 'Weather-Resistant<br>Fabric Options'}</span>
     </div>
 
     <div class="detail-feature">
@@ -263,7 +265,9 @@ let featureStrip = p[0] === 'gazebo-tents' ? `
           <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.7 1.7-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5v.2h-2.4v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1L8 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H6.7v-2.4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9L8 8.6l1.7-1.7.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.5v-.2h2.4v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1 1.7 1.7-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5 1h.2V14h-.2a1.7 1.7 0 0 0-1.5 1z"/>
         </svg>
       </div>
-      <span>Custom Logo<br>Printing</span>
+     <span>${p[0] === 'feather-flags'
+  ? 'Custom Flag<br>Printing'
+  : 'Custom Logo<br>Printing'}</span>
     </div>
 
     <div class="detail-feature">
@@ -274,7 +278,9 @@ let featureStrip = p[0] === 'gazebo-tents' ? `
           <path d="M4 20h5"/>
         </svg>
       </div>
-      <span>Multiple Size<br>Options</span>
+      <span>${p[0] === 'feather-flags'
+  ? '9ft & 12ft Height<br>Options'
+  : 'Multiple Size<br>Options'}</span>
     </div>
 
     <div class="detail-feature">
@@ -285,7 +291,9 @@ let featureStrip = p[0] === 'gazebo-tents' ? `
           <path d="M7 10h10M7 15h10"/>
         </svg>
       </div>
-      <span>Sturdy Frame<br>Structure</span>
+     <span>${p[0] === 'feather-flags'
+  ? 'X-Base & Water<br>Bag Support'
+  : 'Sturdy Frame<br>Structure'}</span>
     </div>
 
     <div class="detail-feature">
@@ -296,7 +304,9 @@ let featureStrip = p[0] === 'gazebo-tents' ? `
           <path d="m9 15 2 2 4-4"/>
         </svg>
       </div>
-      <span>Events &<br>Promotions</span>
+     <span>${p[0] === 'feather-flags'
+  ? 'Storefronts & Outdoor<br>Promotions'
+  : 'Events &<br>Promotions'}</span>
     </div>
 
   </div>
