@@ -180,25 +180,69 @@ function productPage(p) {
   let visual = p[4]
     ? `<img src="${p[4]}" alt="${p[1]}" class="detail-product-image">`
     : icon(kind);
-    // GAZEBO TENT IMAGE GALLERY
-let galleryImages = p[0] === 'gazebo-tents' ? [
-  {
-    name: 'Front View',
-    src: 'gazebo-tent-front.webp'
-  },
-  {
-    name: 'Side View',
-    src: 'gazebo-tent-side.webp'
-  },
-  {
-    name: 'Top View',
-    src: 'gazebo-tent-top.webp'
-  },
-  {
-    name: 'Inside View',
-    src: 'gazebo-tent-inside.webp'
-  }
-] : [];
+
+// PRODUCT IMAGE GALLERIES
+let galleryImages = [];
+
+if (p[0] === 'gazebo-tents') {
+  galleryImages = [
+    {
+      name: 'Front View',
+      src: 'gazebo-tent-front.webp'
+    },
+    {
+      name: 'Side View',
+      src: 'gazebo-tent-side.webp'
+    },
+    {
+      name: 'Top View',
+      src: 'gazebo-tent-top.webp'
+    },
+    {
+      name: 'Inside View',
+      src: 'gazebo-tent-inside.webp'
+    }
+  ];
+}
+
+else if (p[0] === 'marketing-tents') {
+  galleryImages = [
+    {
+      name: 'Front View',
+      src: './assets/Demo%20Tents/demo-tent-front.webp'
+    },
+    {
+      name: 'Inside View',
+      src: './assets/Demo%20Tents/demo-tent-inside.webp'
+    },
+    {
+      name: 'Side View',
+      src: './assets/Demo%20Tents/demo-tent-side.webp'
+    },
+    {
+      name: 'Top View',
+      src: './assets/Demo%20Tents/demo-tent-top.webp'
+    }
+  ];
+}
+
+else if (p[0] === 'feather-flags') {
+  galleryImages = [
+    {
+      name: 'Front View',
+      src: './assets/Demo%20Tents/feather-flag-front-view.webp'
+    },
+    {
+      name: 'Three-Quarter View',
+      src: './assets/Demo%20Tents/feather-flag-three-quarter-view.webp'
+    },
+    {
+      name: 'Outdoor View',
+      src: './assets/Demo%20Tents/feather-flag-outdoor-view.webp'
+    }
+  ];
+}
+
 let featureStrip = p[0] === 'gazebo-tents' ? `
   <div class="detail-feature-strip">
 
