@@ -243,6 +243,41 @@ else if (p[0] === 'feather-flags') {
   ];
 }
 
+
+else if (p[0] === 'ipl-cricket-flags') {
+    galleryImages = [
+        {
+            name: 'Design 1',
+            src: './assets/ipl-flag-1.webp'
+        },
+        {
+            name: 'Design 2',
+            src: './assets/ipl-flag-2.webp'
+        },
+        {
+            name: 'Design 3',
+            src: './assets/ipl-flag-3.webp'
+        }
+    ];
+}
+
+else if (p[0] === 'political-flags') {
+    galleryImages = [
+        {
+            name: 'Front View',
+            src: './assets/political-flag-front-view.webp'
+        },
+        {
+            name: 'Back View',
+            src: './assets/political-flag-back-view.webp'
+        },
+        {
+            name: 'Outdoor View',
+            src: './assets/political-flag-outdoor-view.webp'
+        }
+    ];
+}
+
 let featureStrip = [
   'gazebo-tents',
   'marketing-tents',
