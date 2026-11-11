@@ -243,7 +243,13 @@ else if (p[0] === 'feather-flags') {
   ];
 }
 
-let featureStrip = ['gazebo-tents', 'marketing-tents', 'feather-flags'].includes(p[0]) ? `
+let featureStrip = [
+  'gazebo-tents',
+  'marketing-tents',
+  'feather-flags',
+  'ipl-cricket-flags',
+  'political-flags'
+].includes(p[0]) ? `
   <div class="detail-feature-strip">
 
     <div class="detail-feature">
@@ -253,9 +259,15 @@ let featureStrip = ['gazebo-tents', 'marketing-tents', 'feather-flags'].includes
           <path d="m9 12 2 2 4-4"/>
         </svg>
       </div>
-      <span>${p[0] === 'feather-flags'
+    
+<span>${p[0] === 'feather-flags'
   ? 'Outdoor Display<br>Fabric'
+  : p[0] === 'ipl-cricket-flags'
+  ? 'Custom Cricket<br>Designs'
+  : p[0] === 'political-flags'
+  ? 'Custom Party<br>Designs'
   : 'Weather-Resistant<br>Fabric Options'}</span>
+
     </div>
 
     <div class="detail-feature">
@@ -265,9 +277,15 @@ let featureStrip = ['gazebo-tents', 'marketing-tents', 'feather-flags'].includes
           <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.7 1.7-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5v.2h-2.4v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1L8 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H6.7v-2.4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9L8 8.6l1.7-1.7.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.5v-.2h2.4v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1 1.7 1.7-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5 1h.2V14h-.2a1.7 1.7 0 0 0-1.5 1z"/>
         </svg>
       </div>
-     <span>${p[0] === 'feather-flags'
+   
+<span>${p[0] === 'feather-flags'
   ? 'Custom Flag<br>Printing'
+  : p[0] === 'ipl-cricket-flags'
+  ? 'Custom Flag<br>Printing'
+  : p[0] === 'political-flags'
+  ? 'Party Logo<br>Printing'
   : 'Custom Logo<br>Printing'}</span>
+
     </div>
 
     <div class="detail-feature">
@@ -278,9 +296,15 @@ let featureStrip = ['gazebo-tents', 'marketing-tents', 'feather-flags'].includes
           <path d="M4 20h5"/>
         </svg>
       </div>
-      <span>${p[0] === 'feather-flags'
+    
+<span>${p[0] === 'feather-flags'
   ? '9ft & 12ft Height<br>Options'
+  : p[0] === 'ipl-cricket-flags'
+  ? 'Multiple Flag<br>Designs'
+  : p[0] === 'political-flags'
+  ? 'Multiple Flag<br>Designs'
   : 'Multiple Size<br>Options'}</span>
+
     </div>
 
     <div class="detail-feature">
@@ -291,9 +315,15 @@ let featureStrip = ['gazebo-tents', 'marketing-tents', 'feather-flags'].includes
           <path d="M7 10h10M7 15h10"/>
         </svg>
       </div>
-     <span>${p[0] === 'feather-flags'
+    
+<span>${p[0] === 'feather-flags'
   ? 'X-Base & Water<br>Bag Support'
+  : p[0] === 'ipl-cricket-flags'
+  ? 'Cricket Events<br>& Fan Zones'
+  : p[0] === 'political-flags'
+  ? 'Rallies &<br>Campaigns'
   : 'Sturdy Frame<br>Structure'}</span>
+
     </div>
 
     <div class="detail-feature">
@@ -304,9 +334,15 @@ let featureStrip = ['gazebo-tents', 'marketing-tents', 'feather-flags'].includes
           <path d="m9 15 2 2 4-4"/>
         </svg>
       </div>
-     <span>${p[0] === 'feather-flags'
+   
+<span>${p[0] === 'feather-flags'
   ? 'Storefronts & Outdoor<br>Promotions'
+  : p[0] === 'ipl-cricket-flags'
+  ? 'Brand<br>Promotions'
+  : p[0] === 'political-flags'
+  ? 'Bulk Order<br>Support'
   : 'Events &<br>Promotions'}</span>
+
     </div>
 
   </div>
@@ -354,7 +390,7 @@ let specs = specifications[p[0]] || [
                 ${visual}
               </div>
 ${galleryImages.length ? `
-<div class="detail-image-thumbnails">
+<div class="detail-image-thumbnails ${['feather-flags', 'ipl-cricket-flags', 'political-flags'].includes(p[0]) ? 'feather-centered' : ''}">
   ${galleryImages.map((img, index) => `
     <button
       type="button"
