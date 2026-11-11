@@ -209,19 +209,19 @@ else if (p[0] === 'marketing-tents') {
   galleryImages = [
     {
       name: 'Front View',
-      src: './assets/Demo%20Tents/demo-tent-front.webp'
+     src: './assets/demo-tent-front.webp'
     },
     {
       name: 'Inside View',
-      src: './assets/Demo%20Tents/demo-tent-inside.webp'
+     src: './assets/demo-tent-inside.webp'
     },
     {
       name: 'Side View',
-      src: './assets/Demo%20Tents/demo-tent-side.webp'
+     src: './assets/demo-tent-side.webp'
     },
     {
       name: 'Top View',
-      src: './assets/Demo%20Tents/demo-tent-top.webp'
+      src: './assets/demo-tent-top.webp'
     }
   ];
 }
@@ -230,15 +230,15 @@ else if (p[0] === 'feather-flags') {
   galleryImages = [
     {
       name: 'Front View',
-      src: './assets/Demo%20Tents/feather-flag-front-view.webp'
+     src: './assets/feather-flag-front-view.webp'
     },
     {
       name: 'Three-Quarter View',
-      src: './assets/Demo%20Tents/feather-flag-three-quarter-view.webp'
+     src: './assets/feather-flag-three-quarter-view.webp'
     },
     {
       name: 'Outdoor View',
-      src: './assets/Demo%20Tents/feather-flag-outdoor-view.webp'
+      src: './assets/feather-flag-outdoor-view.webp'
     }
   ];
 }
