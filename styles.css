@@ -710,3 +710,27 @@
 }
 
 
+/* CENTER THREE-IMAGE PRODUCT GALLERIES */
+
+.detail-image-thumbnails.feather-centered {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+}
+
+.detail-image-thumbnails.feather-centered > * {
+    flex: 0 1 300px;
+    min-width: 0;
+}
+
+/* MOBILE RESPONSIVE ALIGNMENT */
+
+@media (max-width: 600px) {
+    .detail-image-thumbnails.feather-centered > * {
+        flex: 1 1 100%;
+    }
+}
+
