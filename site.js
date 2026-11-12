@@ -445,7 +445,7 @@ let specs = specifications[p[0]] || [
                 ${visual}
               </div>
 ${galleryImages.length ? `
-<div class="detail-image-thumbnails ${['feather-flags', 'ipl-cricket-flags', 'political-flags'].includes(p[0]) ? 'feather-centered' : ''}">
+<div class="detail-image-thumbnails ${['feather-flags', 'ipl-cricket-flags', 'political-flags', 'roll-up-standees', 'auto-ads-branding'].includes(p[0]) ? 'feather-centered' : ''}">
   ${galleryImages.map((img, index) => `
     <button
       type="button"
