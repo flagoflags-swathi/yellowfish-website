@@ -177,211 +177,231 @@ function productPage(p) {
     : p[0].includes('standee') ? 'stand'
     : 'flag';
 
-  let visual = p[4]
-    ? `<img src="${p[4]}" alt="${p[1]}" class="detail-product-image">`
-    : icon(kind);
-
+  
 // PRODUCT IMAGE GALLERIES
 let galleryImages = [];
 
+const asset = name => `./assets/${name}`;
+
 if (p[0] === 'gazebo-tents') {
   galleryImages = [
-    {
-      name: 'Front View',
-      src: 'gazebo-tent-front.webp'
-    },
-    {
-      name: 'Side View',
-      src: 'gazebo-tent-side.webp'
-    },
-    {
-      name: 'Top View',
-      src: 'gazebo-tent-top.webp'
-    },
-    {
-      name: 'Inside View',
-      src: 'gazebo-tent-inside.webp'
-    }
+    { name: 'Front View', src: asset('gazebo-tent-1.webp') },
+    { name: 'Side View', src: asset('gazebo-tent-2.webp') },
+    { name: 'Top View', src: asset('gazebo-tent-3.webp') },
+    { name: 'Inside View', src: asset('gazebo-tent-4.webp') }
   ];
 }
 
 else if (p[0] === 'marketing-tents') {
   galleryImages = [
-    {
-      name: 'Front View',
-     src: './assets/demo-tent-front.webp'
-    },
-    {
-      name: 'Inside View',
-     src: './assets/demo-tent-inside.webp'
-    },
-    {
-      name: 'Side View',
-     src: './assets/demo-tent-side.webp'
-    },
-    {
-      name: 'Top View',
-      src: './assets/demo-tent-top.webp'
-    }
+    { name: 'Front View', src: asset('demo-tent-front.webp') },
+    { name: 'Inside View', src: asset('demo-tent-inside.webp') },
+    { name: 'Side View', src: asset('demo-tent-side.webp') },
+    { name: 'Top View', src: asset('demo-tent-top.webp') }
   ];
 }
 
 else if (p[0] === 'feather-flags') {
   galleryImages = [
-    {
-      name: 'Front View',
-     src: './assets/feather-flag-front-view.webp'
-    },
-    {
-      name: 'Three-Quarter View',
-     src: './assets/feather-flag-three-quarter-view.webp'
-    },
-    {
-      name: 'Outdoor View',
-      src: './assets/feather-flag-outdoor-view.webp'
-    }
+    { name: 'Front View', src: asset('feather-flag-front-view.webp') },
+    { name: 'Three-Quarter View', src: asset('feather-flag-three-quarter-view.webp') },
+    { name: 'Outdoor View', src: asset('feather-flag-outdoor-view.webp') }
   ];
 }
 
-
 else if (p[0] === 'ipl-cricket-flags') {
-    galleryImages = [
-        {
-            name: 'Design 1',
-            src: './assets/ipl-flag-1.webp'
-        },
-        {
-            name: 'Design 2',
-            src: './assets/ipl-flag-2.webp'
-        },
-        {
-            name: 'Design 3',
-            src: './assets/ipl-flag-3.webp'
-        }
-    ];
+  galleryImages = [
+    { name: 'Design 1', src: asset('ipl-flag-1.webp') },
+    { name: 'Design 2', src: asset('ipl-flag-2.webp') },
+    { name: 'Design 3', src: asset('ipl-flag-3.webp') }
+  ];
 }
 
 else if (p[0] === 'political-flags') {
-    galleryImages = [
-        {
-            name: 'Front View',
-            src: './assets/political-flag-front-view.webp'
-        },
-        {
-            name: 'Back View',
-            src: './assets/political-flag-back-view.webp'
-        },
-        {
-            name: 'Outdoor View',
-            src: './assets/political-flag-outdoor-view.webp'
-        }
-    ];
+  galleryImages = [
+    { name: 'Front View', src: asset('political-flag-front-view.webp') },
+    { name: 'Back View', src: asset('political-flag-back-view.webp') },
+    { name: 'Outdoor View', src: asset('political-flag-outdoor-view.webp') }
+  ];
 }
 
-let featureStrip = [
-  'gazebo-tents',
-  'marketing-tents',
-  'feather-flags',
-  'ipl-cricket-flags',
-  'political-flags'
-].includes(p[0]) ? `
+else if (p[0] === 'promotional-umbrellas') {
+  galleryImages = [
+    { name: 'Front View', src: asset('umbrella-6ft-front.webp') },
+    { name: 'Side View', src: asset('umbrella-6ft-side.webp') },
+    { name: 'Top View', src: asset('umbrella-6ft-top.webp') },
+    { name: 'Folded View', src: asset('umbrella-6ft-folded.webp') },
+    { name: 'Stand Detail', src: asset('umbrella-6ft-stand-detail.webp') }
+  ];
+}
+
+else if (p[0] === 'cantilever-umbrellas') {
+  galleryImages = [
+    { name: 'Front View', src: asset('cantilever-umbrella-front.webp') },
+    { name: 'Side View', src: asset('cantilever-umbrella-side.webp') },
+    { name: 'Top View', src: asset('cantilever-umbrella-top.webp') },
+    { name: 'Inside View', src: asset('cantilever-umbrella-inside.webp') },
+    { name: 'Folded View', src: asset('cantilever-umbrella-folded.webp') },
+    { name: 'Stand Detail', src: asset('cantilever-umbrella-stand-detail.webp') }
+  ];
+}
+
+else if (p[0] === 'promotional-tables') {
+  galleryImages = [
+    { name: 'Front View', src: asset('promotional-table-front-view.webp') },
+    { name: 'Side View', src: asset('promotional-table-side-view.webp') },
+    { name: 'Back View', src: asset('promotional-table-back-view.webp') },
+    { name: 'Overview', src: asset('promotional-table-overview.webp') }
+  ];
+}
+
+else if (p[0] === 'roll-up-standees') {
+  galleryImages = [
+    { name: 'Front View', src: asset('rollup-standee-front-view.webp') },
+    { name: 'Side View', src: asset('rollup-standee-side-view.webp') },
+    { name: 'Back View', src: asset('rollup-standee-back-view.webp') }
+  ];
+}
+
+else if (p[0] === 'promotional-table-umbrellas') {
+  galleryImages = [
+    { name: 'Front View', src: asset('promo-table-with-umbrella-front-view.webp') },
+    { name: 'Side View', src: asset('promo-table-with-umbrella-side-view.webp') },
+    { name: 'Back View', src: asset('promo-table-with-umbrella-back-view.webp') },
+    { name: 'Top View', src: asset('promo-table-with-umbrella-top-view.webp') }
+  ];
+}
+
+// Use the first gallery image as the main image.
+// If no gallery exists, use the product icon/image.
+let visual = galleryImages.length
+  ? `<img src="${galleryImages[0].src}" alt="${p[1]} - ${galleryImages[0].name}" class="detail-product-image">`
+  : p[4]
+    ? `<img src="${p[4]}" alt="${p[1]}" class="detail-product-image">`
+    : icon(kind);
+
+
+// FIVE-FEATURE BAND FOR ALL PRODUCT PAGES
+const featureContent = {
+  'gazebo-tents': [
+    'Weather-Resistant<br>Fabric Options',
+    'Custom Logo<br>Printing',
+    'Multiple Size<br>Options',
+    'Sturdy Frame<br>Structure',
+    'Events &<br>Promotions'
+  ],
+  'marketing-tents': [
+    'Outdoor<br>Promotions',
+    'Custom Logo<br>Printing',
+    'Multiple Size<br>Options',
+    'Portable Frame<br>Structure',
+    'Events &<br>Roadshows'
+  ],
+  'feather-flags': [
+    'Outdoor Display<br>Fabric',
+    'Custom Flag<br>Printing',
+    '9ft & 12ft Height<br>Options',
+    'X-Base & Water<br>Bag Support',
+    'Storefront & Outdoor<br>Promotions'
+  ],
+  'ipl-cricket-flags': [
+    'Custom Cricket<br>Designs',
+    'Custom Flag<br>Printing',
+    'Multiple Flag<br>Designs',
+    'Cricket Events<br>& Fan Zones',
+    'Brand<br>Promotions'
+  ],
+  'political-flags': [
+    'Custom Party<br>Designs',
+    'Party Logo<br>Printing',
+    'Multiple Flag<br>Designs',
+    'Rallies &<br>Campaigns',
+    'Bulk Order<br>Support'
+  ],
+  'custom-flags': [
+    'Custom Flag<br>Designs',
+    'Full-Colour<br>Printing',
+    'Multiple Size<br>Options',
+    'Quality Fabric<br>Options',
+    'Events &<br>Promotions'
+  ],
+  'promotional-umbrellas': [
+    'Custom Panel<br>Printing',
+    'Brand Logo<br>Display',
+    'Multiple Colour<br>Options',
+    'Sturdy Frame<br>Structure',
+    'Outdoor Brand<br>Promotions'
+  ],
+  'cantilever-umbrellas': [
+    'Side Pole<br>Design',
+    '360° Rotation<br>Options',
+    'Large Canopy<br>Coverage',
+    'Sturdy Stand<br>Structure',
+    'Cafe & Outdoor<br>Seating'
+  ],
+  'promotional-tables': [
+    'Custom Table<br>Printing',
+    'Portable<br>Structure',
+    'Brand Display<br>Space',
+    'Easy Setup<br>Design',
+    'Events &<br>Promotions'
+  ],
+  'roll-up-standees': [
+    'Custom Graphic<br>Printing',
+    'Portable<br>Display',
+    'Multiple Size<br>Options',
+    'Easy Setup<br>Design',
+    'Exhibitions &<br>Events'
+  ],
+  'promotional-table-umbrellas': [
+    'Custom Umbrella<br>Printing',
+    'Branded Table<br>Display',
+    'Portable<br>Structure',
+    'Outdoor Shade<br>Coverage',
+    'Promotions &<br>Events'
+  ],
+  'auto-ads-branding': [
+    'Custom Vehicle<br>Branding',
+    'Full-Colour<br>Printing',
+    'Eye-Catching<br>Designs',
+    'Mobile Brand<br>Visibility',
+    'Local Outdoor<br>Advertising'
+  ]
+};
+
+const featureLabels = featureContent[p[0]] || [
+  'Custom Branding',
+  'Quality Materials',
+  'Multiple Options',
+  'Made to Order',
+  'Events & Promotions'
+];
+
+const featureIcons = [
+  `<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/><path d="m9 12 2 2 4-4"/>`,
+  `<circle cx="12" cy="12" r="3"/><path d="M19 13a7 7 0 0 0 0-2l2-1.5-2-3.5-2.3 1a7 7 0 0 0-1.7-1L14.5 3h-5L9 6a7 7 0 0 0-1.7 1L5 6 3 9.5 5 11a7 7 0 0 0 0 2l-2 1.5L5 18l2.3-1a7 7 0 0 0 1.7 1l.5 3h5l.5-3a7 7 0 0 0 1.7-1l2.3 1 2-3.5z"/>`,
+  `<path d="M4 20 20 4"/><path d="M5 16l3 3M8 13l2 2M11 10l2 2M14 7l2 2"/><path d="M4 20h5"/>`,
+  `<path d="M3 21V5l9-3 9 3v16"/><path d="M3 5h18M7 5v16M17 5v16M3 21h18"/>`,
+  `<rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 15 2 2 4-4"/>`
+];
+
+let featureStrip = `
   <div class="detail-feature-strip">
-
-    <div class="detail-feature">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
-          <path d="m9 12 2 2 4-4"/>
-        </svg>
+    ${featureLabels.map((label, index) => `
+      <div class="detail-feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            ${featureIcons[index]}
+          </svg>
+        </div>
+        <span>${label}</span>
       </div>
-    
-<span>${p[0] === 'feather-flags'
-  ? 'Outdoor Display<br>Fabric'
-  : p[0] === 'ipl-cricket-flags'
-  ? 'Custom Cricket<br>Designs'
-  : p[0] === 'political-flags'
-  ? 'Custom Party<br>Designs'
-  : 'Weather-Resistant<br>Fabric Options'}</span>
-
-    </div>
-
-    <div class="detail-feature">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.7 1.7-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5v.2h-2.4v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1L8 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H6.7v-2.4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9L8 8.6l1.7-1.7.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.5v-.2h2.4v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1 1.7 1.7-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5 1h.2V14h-.2a1.7 1.7 0 0 0-1.5 1z"/>
-        </svg>
-      </div>
-   
-<span>${p[0] === 'feather-flags'
-  ? 'Custom Flag<br>Printing'
-  : p[0] === 'ipl-cricket-flags'
-  ? 'Custom Flag<br>Printing'
-  : p[0] === 'political-flags'
-  ? 'Party Logo<br>Printing'
-  : 'Custom Logo<br>Printing'}</span>
-
-    </div>
-
-    <div class="detail-feature">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 20 20 4"/>
-          <path d="M5 16l3 3M8 13l2 2M11 10l2 2M14 7l2 2"/>
-          <path d="M4 20h5"/>
-        </svg>
-      </div>
-    
-<span>${p[0] === 'feather-flags'
-  ? '9ft & 12ft Height<br>Options'
-  : p[0] === 'ipl-cricket-flags'
-  ? 'Multiple Flag<br>Designs'
-  : p[0] === 'political-flags'
-  ? 'Multiple Flag<br>Designs'
-  : 'Multiple Size<br>Options'}</span>
-
-    </div>
-
-    <div class="detail-feature">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 21V5l9-3 9 3v16"/>
-          <path d="M3 5h18M7 5v16M17 5v16M3 21h18"/>
-          <path d="M7 10h10M7 15h10"/>
-        </svg>
-      </div>
-    
-<span>${p[0] === 'feather-flags'
-  ? 'X-Base & Water<br>Bag Support'
-  : p[0] === 'ipl-cricket-flags'
-  ? 'Cricket Events<br>& Fan Zones'
-  : p[0] === 'political-flags'
-  ? 'Rallies &<br>Campaigns'
-  : 'Sturdy Frame<br>Structure'}</span>
-
-    </div>
-
-    <div class="detail-feature">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="3" y="4" width="18" height="17" rx="2"/>
-          <path d="M16 2v4M8 2v4M3 10h18"/>
-          <path d="m9 15 2 2 4-4"/>
-        </svg>
-      </div>
-   
-<span>${p[0] === 'feather-flags'
-  ? 'Storefronts & Outdoor<br>Promotions'
-  : p[0] === 'ipl-cricket-flags'
-  ? 'Brand<br>Promotions'
-  : p[0] === 'political-flags'
-  ? 'Bulk Order<br>Support'
-  : 'Events &<br>Promotions'}</span>
-
-    </div>
-
+    `).join('')}
   </div>
-` : '';
+`;
+
   let waMessage = `Hi Yellow Fish Ads, I am interested in ${p[1]}. Please share product details, available sizes, materials and pricing.`;
 
   let waLink = `https://wa.me/918096822114?text=${encodeURIComponent(waMessage)}`;
@@ -431,13 +451,18 @@ ${galleryImages.length ? `
       type="button"
       class="detail-thumb ${index === 0 ? 'active' : ''}"
       onclick="
-        const gallery = this.closest('.detail-gallery');
-        const mainImage = gallery.querySelector('.detail-product-image');
-        mainImage.src = this.querySelector('img').src;
-        mainImage.alt = this.querySelector('img').alt;
-        gallery.querySelectorAll('.detail-thumb')
-          .forEach(item => item.classList.remove('active'));
-        this.classList.add('active');
+       const gallery = this.closest('.detail-gallery');
+const mainImage = gallery.querySelector('.detail-product-image');
+
+if (!mainImage) return;
+
+mainImage.src = this.querySelector('img').src;
+mainImage.alt = this.querySelector('img').alt;
+
+gallery.querySelectorAll('.detail-thumb')
+  .forEach(item => item.classList.remove('active'));
+
+this.classList.add('active');
       "
     >
       <img src="${img.src}" alt="${img.name}">
