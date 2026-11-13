@@ -734,3 +734,82 @@
     }
 }
 
+/* =================================
+   YELLOW FISH ADS - PREMIUM HEADER
+   NAVY BLUE + GOLD + WHITE
+================================= */
+
+.topbar {
+    background: #FFD21F;
+    color: #102D55;
+}
+
+.topbar .container {
+    color: #102D55;
+}
+
+.header {
+    background: #102D55;
+    border-bottom: 3px solid #FFD21F;
+    backdrop-filter: none;
+}
+
+.header .nav {
+    min-height: 84px;
+}
+
+.header .brand {
+    color: #FFFFFF;
+}
+
+.header .brand small {
+    color: #FFD21F;
+}
+
+.header .brandlogo {
+    background: #FFFFFF;
+    border: 2px solid #FFD21F;
+}
+
+.header .navlinks a {
+    color: #FFFFFF;
+    transition: color 0.2s ease;
+}
+
+.header .navlinks a:hover {
+    color: #FFD21F;
+}
+
+.header .header-call-btn {
+    background: #FFD21F;
+    color: #102D55 !important;
+    border: 2px solid #FFD21F;
+    padding: 13px 23px;
+    font-size: 15px;
+    border-radius: 30px;
+    box-shadow: none;
+}
+
+.header .header-call-btn:hover {
+    background: #FFFFFF;
+    color: #102D55 !important;
+    border-color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 560px) {
+    .header .nav {
+        min-height: 76px;
+    }
+
+    .header .brand {
+        color: #FFFFFF;
+    }
+
+    .header .header-call-btn {
+        padding: 11px 14px;
+        font-size: 13px;
+    }
+}
+
+
