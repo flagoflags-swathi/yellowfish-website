@@ -49,7 +49,12 @@ function home(){shell(`<main><section class="hero"><div class="container"><div c
    rel="noopener"
    style="background:#25D366;color:white;border-color:#25D366;">
    WhatsApp Us
-</a></div></div><div class="hero-visual"><img src="./assets/hero-product-collage.webp" alt="Yellow Fish Ads promotional products"></div></div></div></section><section class="section" id="products"><div class="container"><div class="sectionhead"><div><span class="pill">Our product range</span><h2>Promotional products for every activation</h2></div><p>Explore dedicated product pages, review the options and send your requirements for a tailored quotation.</p></div><div class="grid">${products.map(card).join('')}</div></div></section>
+</a></div></div>
+<div class="hero-visual">
+    <img src="./assets/hero-product-collage-transparent.webp"
+         alt="Yellow Fish Ads promotional products">
+</div>
+</div></div></section><section class="section" id="products"><div class="container"><div class="sectionhead"><div><span class="pill">Our product range</span><h2>Promotional products for every activation</h2></div><p>Explore dedicated product pages, review the options and send your requirements for a tailored quotation.</p></div><div class="grid">${products.map(card).join('')}</div></div></section>
 <section class="section demo-projects">
   <div class="container">
     <div class="sectionhead">
