@@ -904,17 +904,12 @@
     justify-content: center;
     min-width: 0;
 }
-.hero-visual {
-    max-width: 540px;
-    width: 100%;
-    justify-self: center;
-}
 
 .hero-visual img {
     display: block;
     width: 100%;
-    max-width: 580px;
-    max-height: 450px;
+    max-width: 680px;
+    max-height: 500px;
     height: auto;
     object-fit: contain;
     border-radius: 0;
