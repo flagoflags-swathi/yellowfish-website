@@ -272,6 +272,14 @@ else if (p[0] === 'promotional-table-umbrellas') {
   ];
 }
 
+else if (p[0] === 'auto-ads-branding') {
+  galleryImages = [
+    { name: 'Back View', src: asset('auto-ads-branding-back-view.webp') },
+    { name: 'Left Side View', src: asset('auto-ads-branding-left-side-view.webp') },
+    { name: 'Right Side View', src: asset('auto-ads-branding-right-side-view.webp') }
+  ];
+}
+
 // Use the first gallery image as the main image.
 // If no gallery exists, use the product icon/image.
 let visual = galleryImages.length
