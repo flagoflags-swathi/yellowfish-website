@@ -240,6 +240,9 @@ function home(){shell(`<main><section class="hero"><div class="container"><div c
     </div>
   </div>
 </section>
+</main>
+`);
+}
 function moveProjects(direction) {
   const gallery = document.getElementById('projectGallery');
 
