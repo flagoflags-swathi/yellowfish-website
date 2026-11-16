@@ -267,7 +267,9 @@ function productPage(p) {
 // PRODUCT IMAGE GALLERIES
 let galleryImages = [];
 
-const asset = name => `./assets/${name}`;
+
+const asset = name => './assets/' + name;
+
 
 
 if (p[0] === 'gazebo-tents') {
