@@ -269,6 +269,7 @@ let galleryImages = [];
 
 const asset = name => `./assets/${name}`;
 
+
 if (p[0] === 'gazebo-tents') {
   galleryImages = [
     { name: 'Front View', src: asset('gazebo-tent-1.webp') },
