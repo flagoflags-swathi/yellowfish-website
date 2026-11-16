@@ -1045,5 +1045,208 @@
     }
 }
 
+/* ==========================================
+   YELLOW FISH ADS - HOMEPAGE DESKTOP REFINEMENT
+   ========================================== */
+
+/* 1. PRODUCT RANGE HEADING */
+
+.product-range-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 38px;
+}
+
+.product-range-head h2 {
+    color: #102D55;
+    max-width: 850px;
+    margin: 12px auto;
+    font-size: clamp(32px, 3vw, 44px);
+    line-height: 1.15;
+}
+
+.product-range-head p {
+    color: #596579;
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* 2. HERO WAVE AND PRODUCT SECTION SPACING */
+
+@media (min-width: 901px) {
+    .hero {
+        padding-bottom: 105px;
+    }
+
+    #products.section {
+        padding-top: 48px;
+    }
+}
+
+
+/* 3. REAL PROJECTS SECTION */
+
+.demo-projects {
+    padding: 65px 0;
+}
+
+.demo-projects .sectionhead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 32px;
+}
+
+.demo-projects .sectionhead h2 {
+    color: #ffffff;
+    max-width: 850px;
+    margin: 12px auto;
+    font-size: clamp(30px, 3vw, 42px);
+    line-height: 1.2;
+}
+
+.demo-projects .sectionhead p {
+    color: #d5deeb;
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* 4. WHY CHOOSE YELLOW FISH ADS */
+
+.why-choose-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 32px;
+}
+
+.why-choose-head h2 {
+    color: #102D55;
+    font-size: clamp(30px, 3vw, 42px);
+    line-height: 1.2;
+    margin: 12px auto;
+}
+
+.why-choose-head p {
+    color: #596579;
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.featuregrid {
+    gap: 22px;
+}
+
+.featuregrid .feature {
+    padding: 28px;
+    border: 1px solid #e6ebf2;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(16, 29, 53, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.featuregrid .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(16, 29, 53, 0.10);
+}
+
+.featuregrid .feature .num {
+    background: #fff1bd;
+    color: #102D55;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    font-size: 15px;
+}
+
+.featuregrid .feature h3 {
+    color: #102D55;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.featuregrid .feature p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* 5. FOOTER - THREE BALANCED COLUMNS */
+
+.footer {
+    padding: 58px 0 25px;
+}
+
+@media (min-width: 901px) {
+    .footgrid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr 1.2fr;
+        gap: 55px;
+        align-items: start;
+    }
+}
+
+.footer .footgrid > div {
+    min-width: 0;
+}
+
+.footer .brand {
+    margin-bottom: 18px;
+}
+
+.footer .footgrid h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 5px 0 20px;
+}
+
+.footer .footgrid p {
+    color: #b9c5d8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 13px;
+}
+
+.footer .footer-links a,
+.footer .footer-contact a {
+    color: #cbd5e1;
+    transition: color 0.2s ease;
+}
+
+.footer .footer-links a:hover,
+.footer .footer-contact a:hover {
+    color: #FFD21F;
+}
+
+.footer .footer-explore {
+    display: inline-block;
+    margin-top: 10px;
+    color: #FFD21F !important;
+    font-weight: 800;
+}
+
+.footer .copyright {
+    margin-top: 38px;
+    padding-top: 20px;
+    text-align: center;
+    color: #91a0b7;
+    line-height: 1.7;
+}
+
 
 
