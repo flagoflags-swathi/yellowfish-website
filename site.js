@@ -40,7 +40,45 @@ function header(){return `<div class="topbar"><div class="container"><span>Promo
   <span>☎</span> Call Us Now
 </a>
 </div></header>`}
-function footer(){return `<footer class="footer"><div class="container"><div class="footgrid"><div><a class="brand" href="index.html"><img class="brandlogo" src="./assets/yellow-fish-ads-logo.jpg" alt="Yellow Fish Ads logo" width="64" height="64"><span style="color:white">YELLOW FISH ADS<small style="color:#b9c5d8">PROMOTIONAL PRODUCTS</small></span></a><p>Promotional products and outdoor branding solutions for businesses, events and campaigns. Based in Hyderabad, India.</p></div><div><h3>Products</h3>${products.slice(0,6).map(p=>`<p><a href="${p[0]}.html">${p[1]}</a></p>`).join('')}</div><div><h3>Get in touch</h3><p>Sahithi Kadamanchi Complex, 403 &amp; 404, beside Neerus Shopping Mall, opposite Metro Pillar 1566, Chaitanyapuri X Roads, Hyderabad – 500060, Telangana, India.</p><p><a href="tel:+918096822114">+91 80968 22114</a><br><a href="tel:+919618185869">+91 96181 85869</a></p><p>GSTIN: 36ABIFM4974G1ZW</p><a class="btn" href="contact.html">Send an Enquiry</a></div></div><div class="copyright">© <span id="year"></span> Yellow Fish Ads. All rights reserved. · Website content and contact details to be verified before launch.</div></div></footer>`}
+
+function footer(){return `<footer class="footer">
+  <div class="container">
+    <div class="footgrid">
+
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img class="brandlogo" src="./assets/yellow-fish-ads-logo.jpg" alt="Yellow Fish Ads logo" width="64" height="64">
+          <span style="color:white">YELLOW FISH ADS<small style="color:#b9c5d8">PROMOTIONAL PRODUCTS</small></span>
+        </a>
+        <h3>Your Brand. Our Creativity.</h3>
+        <p>Promotional products and outdoor branding solutions for businesses across India.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Product Categories</h3>
+        <p><a href="marketing-tents.html">Promotional Tents</a></p>
+        <p><a href="political-flags.html">Flags &amp; Banners</a></p>
+        <p><a href="promotional-umbrellas.html">Promotional Umbrellas</a></p>
+        <p><a href="roll-up-standees.html">Display &amp; Branding Products</a></p>
+        <p><a href="flag-arches.html">Custom Promotional Solutions</a></p>
+        <p><a class="footer-explore" href="index.html#products">Explore All Products →</a></p>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Sahithi Kadamanchi Complex, 403 &amp; 404, beside Neerus Shopping Mall, opposite Metro Pillar 1566, Chaitanyapuri X Roads, Hyderabad – 500060, Telangana, India.</p>
+        <p>
+          <a href="tel:+918096822114">+91 80968 22114</a><br>
+          <a href="tel:+919618185869">+91 96181 85869</a>
+        </p>
+        <p>GSTIN: 36ABIFM4974G1ZW</p>
+      </div>
+
+    </div>
+    <div class="copyright">© <span id="year"></span> Yellow Fish Ads. All rights reserved.</div>
+  </div>
+</footer>`}
+
 function shell(content){document.body.innerHTML=header()+content+footer();document.getElementById('year').textContent=new Date().getFullYear()}
 function home(){shell(`<main><section class="hero"><div class="container"><div class="hero-layout"><div class="hero-copy"><div class="eyebrow">Events · Exhibitions · Retail · Brand Activations</div><h1>Complete Promotional <span>Solutions for Your Brand.</span></h1><p>Explore our wide range of promotional products and custom branding solutions, designed to boost your brand visibility, support business promotion and help your business grow. Discover more solutions to meet all your branding needs.</p><div class="hero-actions"><a class="btn" href="#products">Explore Products</a>
 <a class="btn outline"
@@ -54,15 +92,21 @@ function home(){shell(`<main><section class="hero"><div class="container"><div c
     <img src="./assets/hero-product-collage-transparent.webp"
          alt="Yellow Fish Ads promotional products">
 </div>
-</div></div></section><section class="section" id="products"><div class="container"><div class="sectionhead"><div><span class="pill">Our product range</span><h2>Promotional products for every activation</h2></div><p>Explore dedicated product pages, review the options and send your requirements for a tailored quotation.</p></div><div class="grid">${products.map(card).join('')}</div></div></section>
+<div class="sectionhead product-range-head">
+  <div>
+    <span class="pill">OUR PRODUCT RANGE</span>
+    <h2>Everything You Need to Make Your Brand Stand Out</h2>
+  </div>
+  <p>Explore our wide range of promotional tents, gazebo tents, feather flags, umbrellas and custom branding solutions. Designed to make your brand stand out at exhibitions, events, retail outlets and outdoor promotions.</p>
+</div><div class="grid">${products.map(card).join('')}</div></div></section>
 <section class="section demo-projects">
   <div class="container">
     <div class="sectionhead">
       <div>
-        <span class="pill">Our Real Projects</span>
-        <h2>Our Projects & Brand Activations</h2>
-      </div>
-      <p>Showcasing our completed projects, promotional installations and brand activations across India.</p>
+      <span class="pill">OUR PROJECTS</span>
+<h2>Our Work in Action. Your Brand in the Spotlight.</h2>
+</div>
+<p>Explore our completed promotional installations, branded tents, event displays and brand activation projects delivered for businesses across India.</p>
     </div>
    <div class="demo-project-gallery">
 
@@ -165,7 +209,37 @@ function home(){shell(`<main><section class="hero"><div class="container"><div c
   </div>
  </div>
  </section>
-<section class="section soft"><div class="container"><div class="sectionhead"><div><span class="pill">Why Yellow Fish Ads</span><h2>From product idea to branded visibility</h2></div><p>We support promotional and outdoor branding requirements with product choices suited to your campaign, location and quantity.</p></div><div class="featuregrid"><div class="feature"><div class="num">01</div><h3>Campaign-focused range</h3><p>Tents, flags, umbrellas and display products for roadshows, retail promotions and events.</p></div><div class="feature"><div class="num">02</div><h3>Custom branding</h3><p>Share your logo and artwork to discuss printing, materials, sizes and finish options.</p></div><div class="feature"><div class="num">03</div><h3>Enquiry-led support</h3><p>Tell us the product, quantity and delivery location so we can prepare a relevant quote.</p></div></div></div></section><section class="section"><div class="container"><div class="cta"><div><h2>Planning your next brand activation?</h2><p>Send your product, quantity, artwork and delivery location.</p></div><a class="btn dark" href="contact.html">Get a Custom Quote →</a></div></div></section></main>`)}
+<section class="section soft">
+  <div class="container">
+    <div class="sectionhead why-choose-head">
+      <div>
+        <span class="pill">WHY YELLOW FISH ADS</span>
+        <h2>Your Promotional Branding Partner, From Start to Finish</h2>
+      </div>
+      <p>From custom printing to campaign-ready promotional products, we help businesses bring their brand visibility to life.</p>
+    </div>
+
+    <div class="featuregrid">
+      <div class="feature">
+        <div class="num">01</div>
+        <h3>Wide Product Range</h3>
+        <p>Tents, flags, umbrellas and promotional display products for your branding needs.</p>
+      </div>
+
+      <div class="feature">
+        <div class="num">02</div>
+        <h3>Custom Branding</h3>
+        <p>Custom printing, colours, materials and sizes to match your brand.</p>
+      </div>
+
+      <div class="feature">
+        <div class="num">03</div>
+        <h3>Dedicated Support</h3>
+        <p>Assistance with product selection, quantities and delivery planning.</p>
+      </div>
+    </div>
+  </div>
+</section>
 function moveProjects(direction) {
   const gallery = document.getElementById('projectGallery');
 
