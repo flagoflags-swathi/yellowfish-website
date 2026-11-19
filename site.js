@@ -92,6 +92,13 @@ function home(){shell(`<main><section class="hero"><div class="container"><div c
     <img src="./assets/hero-product-collage-transparent.webp"
          alt="Yellow Fish Ads promotional products">
 </div>
+
+</div>
+</div>
+</section>
+
+<section id="products" class="section">
+  <div class="container">
 <div class="sectionhead product-range-head">
   <div>
     <span class="pill">OUR PRODUCT RANGE</span>
